@@ -1,0 +1,12 @@
+# Rider / IntelliJ
+.idea/
+
+# Build outputs
+bin/
+obj/
+
+# Visual Studio
+.vs/
+
+# Secrets
+appsettings.Development.json

@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/files/">
+    <File Path="C:/Users/Alex/RiderProjects/SMF.Azubi.ExamMaker/.gitignore" />
+  </Folder>
+  <Folder Name="/source/">
+    <Project Path="ExamMaker.AppHost/ExamMaker.AppHost.csproj" />
+    <Project Path="ExamMaker.ServiceDefaults/ExamMaker.ServiceDefaults.csproj" />
+    <Project Path="ExamMaker/ExamMaker.csproj" />
+  </Folder>
+</Solution>

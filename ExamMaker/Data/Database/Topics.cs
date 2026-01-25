@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
 namespace ExamMaker.Data.Database;
@@ -9,5 +10,6 @@ public class Topics
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
     public int TopicId { get; set; }
-    public string? TopicName { get; set; }
+    [MaxLength(50)]
+    public required string? TopicName { get; set; }
 }

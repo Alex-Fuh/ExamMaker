@@ -11,6 +11,7 @@ public class ExamMakerDbContext(DbContextOptions<ExamMakerDbContext> dbContextOp
     public DbSet<AnswerOptions> AnswerOptions { get; set; }
     public DbSet<Answers> Answers { get; set; }
     public DbSet<Users> Users { get; set; }
+    public DbSet<Results> Results { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -36,6 +37,10 @@ public class ExamMakerDbContext(DbContextOptions<ExamMakerDbContext> dbContextOp
 
         modelBuilder.Entity<AnswerOptions>()
             .Property(a => a.IsTrue)
+            .HasDefaultValue(false);
+        
+        modelBuilder.Entity<Results>()
+            .Property(c => c.IsCorrected)
             .HasDefaultValue(false);
 
         base.OnModelCreating(modelBuilder); // maybe

@@ -22,7 +22,7 @@ public class ExamMakerDbContext(DbContextOptions<ExamMakerDbContext> dbContextOp
             .HasValue<TextQuestions>("text")
             .HasValue<MultipleQuestions>("multiple");
         
-        // F[r die One to Many beziehung bei den MutlipleQuestions.
+        // Für die One to Many beziehung bei den MutlipleQuestions.
         modelBuilder.Entity<MultipleQuestions>()
             .HasMany(m => m.Options)
             .WithOne(o => o.MultipleQuestion)

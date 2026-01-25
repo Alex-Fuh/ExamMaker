@@ -34,13 +34,14 @@ public class AnswerOptions
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int AnswerOptionId { get; set; }
-
+    
     public int QuestionId { get; set; }
-    [ForeignKey(nameof(MultipleQuestion))] 
+    [ForeignKey(nameof(QuestionId))] 
     public  MultipleQuestions MultipleQuestion { get; set; } = null!;
 
     [MaxLength(50)] 
     public required string AnswerOptionText { get; set; }
-    [DefaultValue(true)] 
+
+    [DefaultValue(false)] // im Prinzip nur sowas wie ein Kommentar.
     public bool IsTrue { get; set; }
 }

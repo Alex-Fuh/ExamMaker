@@ -11,5 +11,5 @@ public class Topics
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
     public int TopicId { get; set; }
     [MaxLength(50)]
-    public required string? TopicName { get; set; }
+    public required string TopicName { get; set; }
 }
